@@ -1,5 +1,6 @@
 ## Requirements
 Python 3
+Python3-pip
 Selenium
 Webdriver Manager
 ###Install the required Python packages with the following command:

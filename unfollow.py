@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.common.exceptions import NoSuchElementException
  
 options = Options()
 options.add_argument('--headless')
@@ -38,11 +39,26 @@ following_button.click()
 time.sleep(10)
 
 # Unfollow-Nutzer
-# unfollow_buttons = driver.find_elements_by_xpath('//button[text()="Abonniert"]')
-unfollow_button = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/div[1]/div/div[1]/div/div/div/div[3]/div')
-for i, button in enumerate(unfollow_buttons):
-    if i < 200: # Maximal 200 Nutzer
-        button.click()
+# Unfollow-Nutzer
+unfollow_buttons_xpath = '/html/body/div[2]/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/div[1]/div/div[3]/div/div/div/div[3]/div/button'
+confirm_unfollow_xpath = '/html/body/div[2]/div/div/div[2]/div/div[2]/div[1]/div/div[2]/div/div/div/div/div/div/button[1]'
+
+for i in range(200): # Maximal 200 Nutzer
+    try:
+        unfollow_button = driver.find_element_by_xpath(unfollow_buttons_xpath)
+        unfollow_button.click()
         time.sleep(2) # Warten Sie 2 Sekunden zwischen den Aktionen, um die Wahrscheinlichkeit einer Sperrung zu verringern
+
+        # Prüfen, ob der Bestätigungsdialog angezeigt wird, und klicken Sie auf die Bestätigungsschaltfläche
+        try:
+            confirm_unfollow_button = driver.find_element_by_xpath(confirm_unfollow_xpath)
+            confirm_unfollow_button.click()
+            time.sleep(1)
+        except NoSuchElementException:
+            pass # Bestätigungsdialog wurde nicht angezeigt; fahren Sie fort
+
+    except NoSuchElementException:
+        break # Es wurden keine weiteren Unfollow-Buttons gefunden; beenden Sie die Schleife
+
 
 driver.quit()

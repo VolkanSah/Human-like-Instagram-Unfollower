@@ -1,7 +1,15 @@
 import time
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+ 
+options = Options()
+options.add_argument('--headless')
+options.add_argument('--no-sandbox')
+options.add_argument('--disable-dev-shm-usage')
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+
 
 # Ersetzen Sie diese Werte durch Ihre Instagram-Anmeldedaten
 username = 'your_username'
@@ -27,7 +35,7 @@ time.sleep(2)
 # Klicken Sie auf die Schaltfläche "Abonniert"
 following_button = driver.find_element_by_xpath('//a[contains(@href, "/following/")]')
 following_button.click()
-time.sleep(2)
+time.sleep(10)
 
 # Unfollow-Nutzer
 # unfollow_buttons = driver.find_elements_by_xpath('//button[text()="Abonniert"]')

@@ -4,6 +4,9 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
  
 options = Options()
 options.add_argument('--headless')
@@ -19,9 +22,9 @@ password = 'your_password'
 driver.get('https://www.instagram.com/')
 time.sleep(2)
 
-username_input = driver.find_element_by_name('username')
+username_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, 'username')))
 username_input.send_keys(username)
-password_input = driver.find_element_by_name('password')
+password_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, 'password')))
 password_input.send_keys(password)
 password_input.send_keys(Keys.ENTER)
 

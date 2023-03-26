@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.common.keys import Keys
  
 options = Options()
 options.add_argument('--headless')
@@ -11,13 +11,11 @@ options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-
 # Ersetzen Sie diese Werte durch Ihre Instagram-Anmeldedaten
 username = 'your_username'
 password = 'your_password'
 
 # Anmelden bei Instagram
-driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get('https://www.instagram.com/')
 time.sleep(2)
 

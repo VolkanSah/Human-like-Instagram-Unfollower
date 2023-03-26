@@ -19,8 +19,9 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 
 
 # Ersetzen Sie diese Werte durch Ihre Instagram-Anmeldedaten
-username = ''
-password = ''
+username = 'anna_krukover'
+password = '@BH@2309'
+
 
 # Anmelden bei Instagram
 driver.get('https://www.instagram.com/')
@@ -46,20 +47,19 @@ time.sleep(10)  # Warten Sie nach dem Öffnen der Seite mit den Personen, denen 
 
 
 # Unfollow-Nutzer
-unfollow_buttons_xpath = '//button[contains(text(), "Gefolgt")]'
-confirm_unfollow_xpath = '//button[contains(text(), "Nicht mehr folgen")]'
-
+unfollow_buttons_xpath = '//a[contains(text(), "Gefolgt")]'
+confirm_unfollow_xpath = '//a[contains(text(), "Nicht mehr folgen")]'
 for i in range(25):  # Maximal 25 Nutzer
     try:
-        unfollow_button = driver.find_element_by_xpath(unfollow_buttons_xpath)
+        unfollow_button = 'unfollow_buttons_xpath'
         unfollow_button.click()
-        time.sleep(2)  # Warten Sie 2 Sekunden zwischen den Aktionen, um die Wahrscheinlichkeit einer Sperrung zu verringern
+        time.sleep(5)  # Warten Sie 2 Sekunden zwischen den Aktionen, um die Wahrscheinlichkeit einer Sperrung zu verringern
 
         # Prüfen, ob der Bestätigungsdialog angezeigt wird, und klicken Sie auf die Bestätigungsschaltfläche
         try:
-            confirm_unfollow_button = driver.find_element_by_xpath(confirm_unfollow_xpath)
+            confirm_unfollow_button = 'confirm_unfollow_xpath'
             confirm_unfollow_button.click()
-            time.sleep(1)
+            time.sleep(5)
         except NoSuchElementException:
             pass  # Bestätigungsdialog wurde nicht angezeigt; fahren Sie fort
 
@@ -68,4 +68,3 @@ for i in range(25):  # Maximal 25 Nutzer
 
 
 driver.quit()
-

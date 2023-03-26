@@ -7,6 +7,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import NoSuchElementException
+
  
 options = Options()
 #options.add_argument('--headless')
@@ -47,12 +49,11 @@ time.sleep(10)  # Warten Sie nach dem Öffnen der Seite mit den Personen, denen 
 unfollow_buttons_xpath = '//button[contains(text(), "Gefolgt")]'
 confirm_unfollow_xpath = '//button[contains(text(), "Nicht mehr folgen")]'
 
-
-for i in range(25): # Maximal 200 Nutzer
+for i in range(25):  # Maximal 25 Nutzer
     try:
         unfollow_button = driver.find_element_by_xpath(unfollow_buttons_xpath)
         unfollow_button.click()
-        time.sleep(2) # Warten Sie 2 Sekunden zwischen den Aktionen, um die Wahrscheinlichkeit einer Sperrung zu verringern
+        time.sleep(2)  # Warten Sie 2 Sekunden zwischen den Aktionen, um die Wahrscheinlichkeit einer Sperrung zu verringern
 
         # Prüfen, ob der Bestätigungsdialog angezeigt wird, und klicken Sie auf die Bestätigungsschaltfläche
         try:
@@ -60,10 +61,11 @@ for i in range(25): # Maximal 200 Nutzer
             confirm_unfollow_button.click()
             time.sleep(1)
         except NoSuchElementException:
-            pass # Bestätigungsdialog wurde nicht angezeigt; fahren Sie fort
+            pass  # Bestätigungsdialog wurde nicht angezeigt; fahren Sie fort
 
     except NoSuchElementException:
-        break # Es wurden keine weiteren Unfollow-Buttons gefunden; beenden Sie die Schleife
+        break  # Es wurden keine weiteren Unfollow-Buttons gefunden; beenden Sie die Schleife
 
 
+driver.quit()
 

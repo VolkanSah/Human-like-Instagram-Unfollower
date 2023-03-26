@@ -16,8 +16,8 @@ options.add_argument('--lang=de')  # Füge diese Zeile hinzu, um die Sprache auf
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 # Ersetzen Sie diese Werte durch Ihre Instagram-Anmeldedaten
-username = 'anna_krukover'
-password = '@BH@2309'
+username = 'xxx'
+password = 'xxx'
 
 # Anmelden bei Instagram
 driver.get('https://www.instagram.com/')

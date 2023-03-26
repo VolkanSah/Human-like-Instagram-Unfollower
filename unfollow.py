@@ -30,7 +30,8 @@ following_button.click()
 time.sleep(2)
 
 # Unfollow-Nutzer
-unfollow_buttons = driver.find_elements_by_xpath('//button[text()="Abonniert"]')
+# unfollow_buttons = driver.find_elements_by_xpath('//button[text()="Abonniert"]')
+unfollow_button = driver.find_element_by_xpath('/html/body/div[2]/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/div[1]/div/div[1]/div/div/div/div[3]/div')
 for i, button in enumerate(unfollow_buttons):
     if i < 200: # Maximal 200 Nutzer
         button.click()

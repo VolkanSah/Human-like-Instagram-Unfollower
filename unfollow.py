@@ -1,4 +1,5 @@
 import time
+import random
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.options import Options
@@ -19,8 +20,8 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 
 
 # Ersetzen Sie diese Werte durch Ihre Instagram-Anmeldedaten
-username = 'xxxx'
-password = 'xxxx'
+username = 'xxxxxxxx'
+password = 'xxxxxxxx'
 
 
 # Anmelden bei Instagram
@@ -50,17 +51,17 @@ time.sleep(10)  # Warten Sie nach dem Öffnen der Seite mit den Personen, denen 
 unfollow_buttons_xpath = '//button[contains(@class, "_acan") and contains(@class, "_acap") and contains(@class, "_acat") and contains(@class, "_aj1-")]'
 confirm_unfollow_xpath = '//button[contains(@class, "_a9--") and contains(@class, "_a9-_")]'
 
-for i in range(25):  # Maximal 25 Nutzer
+for i in range(15):  # Maximal 25 Nutzer
     try:
         unfollow_button = driver.find_element(By.XPATH, unfollow_buttons_xpath)
         unfollow_button.click()
-        time.sleep(6)  # Warten Sie 2 Sekunden zwischen den Aktionen, um die Wahrscheinlichkeit einer Sperrung zu verringern
+        time.sleep(3 + 9 * random.random())  # Warten zwischen 3-12 Sekunden zwischen den Aktionen, um die Wahrscheinlichkeit einer Sperrung zu verringern
 
         # Prüfen, ob der Bestätigungsdialog angezeigt wird, und klicken Sie auf die Bestätigungsschaltfläche
         try:
             confirm_unfollow_button = driver.find_element(By.XPATH, confirm_unfollow_xpath)
             confirm_unfollow_button.click()
-            time.sleep(6)
+            time.sleep(3)
         except NoSuchElementException:
             pass  # Bestätigungsdialog wurde nicht angezeigt; fahren Sie fort
 

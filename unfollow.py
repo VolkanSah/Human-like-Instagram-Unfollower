@@ -13,7 +13,6 @@ from selenium.webdriver.support import expected_conditions as EC
 
  
 options = Options()
-options.add_argument("--profile-directory=Default")
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 

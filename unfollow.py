@@ -1,3 +1,4 @@
+# Copyright Volkan Kücükbudak https://github.com/VolkanSah/Instagram-Unfollower
 import time
 import random
 from selenium import webdriver

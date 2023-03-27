@@ -1,4 +1,5 @@
 ## Requirements
+https://selenium-python.readthedocs.io/locating-elements.html
 Python 3
 Python3-pip
 Selenium

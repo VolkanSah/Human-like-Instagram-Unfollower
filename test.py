@@ -12,3 +12,5 @@ search_box = driver.find_element_by_css_selector("input[name='q']")
 print("Suchfeld gefunden:", search_box)
 
 driver.quit()
+
+https://selenium-python.readthedocs.io/locating-elements.html

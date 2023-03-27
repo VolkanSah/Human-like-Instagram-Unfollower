@@ -12,19 +12,15 @@ from selenium.webdriver.support import expected_conditions as EC
 
  
 options = Options()
-#options.add_argument('--headless')
-#options.add_argument('--no-sandbox')
-#options.add_argument('--disable-dev-shm-usage')
-#options.add_argument('--lang=de')  # Füge diese Zeile hinzu, um die Sprache auf Deutsch zu setzen
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 
-# Ersetzen Sie diese Werte durch Ihre Instagram-Anmeldedaten
+# Replace these values with your Instagram credentials
 username = 'xxxxxxxx'
 password = 'xxxxxxxx'
 
 
-# Anmelden bei Instagram
+# Login to Instagram
 driver.get('https://www.instagram.com/')
 time.sleep(5)
 
@@ -34,39 +30,37 @@ password_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
 password_input.send_keys(password)
 password_input.send_keys(Keys.ENTER)
 
-time.sleep(10)  # Warten Sie nach dem Login, bevor Sie zur nächsten Seite navigieren
+time.sleep(10)  # # Wait after login before navigating to the next page
 
-# Gehe zu Ihrem Profil
+# Go to your profile
 driver.get(f'https://www.instagram.com/{username}/')
 time.sleep(5)
 
-# Klicken Sie auf die Schaltfläche "Abonniert"
+# Click the Subscribed button
 following_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//a[contains(@href, "/following/")]')))
-
-#following_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//a[contains(@href, "/following/") and contains(@class, "sqdOP")]')))
 following_button.click()
 time.sleep(10)  # Warten Sie nach dem Öffnen der Seite mit den Personen, denen Sie folgen
 
-# Unfollow-Nutzer
+# Unfollow-User
 unfollow_buttons_xpath = '//button[contains(@class, "_acan") and contains(@class, "_acap") and contains(@class, "_acat") and contains(@class, "_aj1-")]'
 confirm_unfollow_xpath = '//button[contains(@class, "_a9--") and contains(@class, "_a9-_")]'
 
-for i in range(15):  # Maximal 25 Nutzer
+for i in range(15):  # Maximal 25 User at one time or you can be blocked!
     try:
         unfollow_button = driver.find_element(By.XPATH, unfollow_buttons_xpath)
         unfollow_button.click()
-        time.sleep(3 + 9 * random.random())  # Warten zwischen 3-12 Sekunden zwischen den Aktionen, um die Wahrscheinlichkeit einer Sperrung zu verringern
+        time.sleep(3 + 9 * random.random())  # Wait between 3-12 seconds between actions to reduce chances of getting banned
 
-        # Prüfen, ob der Bestätigungsdialog angezeigt wird, und klicken Sie auf die Bestätigungsschaltfläche
+        # Check that the confirmation dialog appears and click the confirmation button
         try:
             confirm_unfollow_button = driver.find_element(By.XPATH, confirm_unfollow_xpath)
             confirm_unfollow_button.click()
             time.sleep(3)
         except NoSuchElementException:
-            pass  # Bestätigungsdialog wurde nicht angezeigt; fahren Sie fort
+            pass  # confirmation dialog was not shown; go on
 
     except NoSuchElementException:
-        break  # Es wurden keine weiteren Unfollow-Buttons gefunden; beenden Sie die Schleife
+        break  # No more unfollow buttons were found; end the loop
 
 
 driver.quit()

@@ -24,7 +24,7 @@ password = 'xxxxxxxx'
 # Login to Instagram
 driver.get('https://www.instagram.com/')
 time.sleep(5)
-
+# skip cookies
 confirm_cookies_xpath = '//button[contains(@class, "_a9--") and contains(@class, "_a9_1")]'
 confirm_cookies = driver.find_element(By.XPATH, confirm_cookies_xpath)
 confirm_cookies.click()

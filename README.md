@@ -29,7 +29,7 @@ python3 unfollow.py
 ```
 The script uses random time intervals between 3-12 seconds for each action to mimic human behavior and minimize the risk of getting blocked.
 
-⚠️ **Be careful**, as you can be blocked. I have tested this configuration, and after 25 unfollows, you may get a warning. If you perform too many actions too often, you may get banned. It's best to limit the number of unfollows to 15 and use a cron job with 10, 15, or 30-minute intervals to work effectively. ⚠️
+⚠️ **Be careful**, as you can be blocked. I have tested this configuration, and after 25 unfollows, you may get a warning. If you perform too many actions too often, you may get banned. It's best to limit the number of unfollows to 15 and use a cron job with 2 -4 hours intervals to work effectively. ⚠️
 
 
 ## Set up a cron job on Unix/Linux-based systems and macOS
@@ -37,9 +37,9 @@ The script uses random time intervals between 3-12 seconds for each action to mi
 - Enter crontab -e to edit your crontab file.
 Add the following line at the end of the file:
 ```bash
-*/30 * * * * /usr/bin/python3 /path/to/your/script.py
+0 */2 * * * * /usr/bin/python3 /path/to/script.py
 ```
-Replace /usr/bin/python3 with the path to your Python installation and /path/to/your/script.py with the path to your script.
+Replace /usr/bin/python3 with the path to your Python installation and /path/to/script.py with the path to your script.
 
 ## Important ⚠️
 Please note that the XPath selectors for the Unfollow and Confirm Unfollow buttons might change over time due to updates in Instagram's web interface. Before submitting any issues or reporting bugs, please verify that the current XPath values in the script are still valid and update them if necessary. You can find the relevant XPath values in the script under the variables unfollow_buttons_xpath and confirm_unfollow_xpath.

@@ -40,7 +40,7 @@ driver.get(f'https://www.instagram.com/{username}/')
 time.sleep(5)
 
 # Klicken Sie auf die Schaltfläche "Abonniert"
-following_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//a[contains(@href, "/following/")]')))
+following_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//a[contains(@href, "/following/") and contains(@class, "sqdOP")]')))
 following_button.click()
 time.sleep(10)  # Warten Sie nach dem Öffnen der Seite mit den Personen, denen Sie folgen
 

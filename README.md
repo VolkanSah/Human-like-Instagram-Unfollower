@@ -1,4 +1,4 @@
-# Best Instagram Unfollower (Human Like)
+# Best Human Like Instagram Unfollower 
 
 ⚠️ **Warning**: This script automates the process of unfollowing users on Instagram. Use it at your own risk. The author takes no responsibility for any consequences resulting from the use of this script. The copyright of this script remains with the author. ⚠️
 ### How do for Debian/Ubuntu. unfollow.py can work on other systems , too.

@@ -13,4 +13,3 @@ print("Suchfeld gefunden:", search_box)
 
 driver.quit()
 
-https://selenium-python.readthedocs.io/locating-elements.html

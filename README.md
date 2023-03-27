@@ -25,7 +25,7 @@ pip install -U selenium webdriver_manager
 Replace the username and password variables in the script with your Instagram account credentials. Adjust the number of users you want to unfollow in the script by changing the range value. Run the script with the following command:
 
 ```sh
-python unfollow.py
+python3 unfollow.py
 ```
 The script uses random time intervals between 3-12 seconds for each action to mimic human behavior and minimize the risk of getting blocked.
 

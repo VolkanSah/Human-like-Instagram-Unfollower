@@ -10,8 +10,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
  
 options = Options()
+options.add_argument(f"user-data-dir=/home/<username>/.config/google-chrome")  # replace the path with the path to your Chrome user data directory
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 
@@ -39,7 +41,7 @@ time.sleep(5)
 # Click the Subscribed button
 following_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//a[contains(@href, "/following/")]')))
 following_button.click()
-time.sleep(10)  # Warten Sie nach dem Öffnen der Seite mit den Personen, denen Sie folgen
+time.sleep(10) 
 
 # Unfollow-User
 unfollow_buttons_xpath = '//button[contains(@class, "_acan") and contains(@class, "_acap") and contains(@class, "_acat") and contains(@class, "_aj1-")]'

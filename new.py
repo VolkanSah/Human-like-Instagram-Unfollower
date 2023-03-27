@@ -52,13 +52,13 @@ for i in range(25):  # Maximal 25 Nutzer
     try:
         unfollow_button = driver.find_element_by_css_selector(unfollow_buttons_css)
         unfollow_button.click()
-        time.sleep(5)  # Warten Sie 2 Sekunden zwischen den Aktionen, um die Wahrscheinlichkeit einer Sperrung zu verringern
+        time.sleep(6)  # Warten Sie 2 Sekunden zwischen den Aktionen, um die Wahrscheinlichkeit einer Sperrung zu verringern
 
         # Prüfen, ob der Bestätigungsdialog angezeigt wird, und klicken Sie auf die Bestätigungsschaltfläche
         try:
             confirm_unfollow_button = driver.find_element_by_css_selector(confirm_unfollow_css)
             confirm_unfollow_button.click()
-            time.sleep(5)
+            time.sleep(6)
         except NoSuchElementException:
             pass  # Bestätigungsdialog wurde nicht angezeigt; fahren Sie fort
 

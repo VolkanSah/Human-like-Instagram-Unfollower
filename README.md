@@ -41,7 +41,7 @@ Add the following line at the end of the file:
 ```
 Replace /usr/bin/python3 with the path to your Python installation and /path/to/your/script.py with the path to your script.
 
-## ⚠️ Important ⚠️
+## Important ⚠️
 Please note that the XPath selectors for the Unfollow and Confirm Unfollow buttons might change over time due to updates in Instagram's web interface. Before submitting any issues or reporting bugs, please verify that the current XPath values in the script are still valid and update them if necessary. You can find the relevant XPath values in the script under the variables unfollow_buttons_xpath and confirm_unfollow_xpath.
 
 ## Disclaimer

@@ -2,7 +2,7 @@
 
 ⚠️ **Warning**: This script automates the process of unfollowing users on Instagram. Use it at your own risk. The author takes no responsibility for any consequences resulting from the use of this script. The copyright of this script remains with the author.
 
-If you have knowledge about marketing, then all you need is an unfollower! This script is set up to look like a human, using random time intervals between actions to avoid detection. It's best to run it using a cron job. 
+If you have knowledge about marketing & webtechnologie, then all you need is an unfollower! This script is set up to look like a human, using random time intervals between actions to avoid detection. It's best to run it using a cron job. 
 Important resources for me: https://selenium-python.readthedocs.io/locating-elements.html
 
 ## Prerequisites

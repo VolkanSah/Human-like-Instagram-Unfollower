@@ -45,8 +45,10 @@ following_button.click()
 time.sleep(10)  # Warten Sie nach dem Öffnen der Seite mit den Personen, denen Sie folgen
 
 # Unfollow-Nutzer
-unfollow_buttons_xpath = '//button[contains(@class, "_acan") and contains(@class, "_acap") and contains(@class, "_acat") and contains(@class, "_aj1-")]'
-confirm_unfollow_xpath = '//button[contains(@class, "_a9--") and contains(@class, "_a9-_")]'
+#unfollow_buttons_xpath = '//button[contains(@class, "_acan") and contains(@class, "_acap") and contains(@class, "_acat") and contains(@class, "_aj1-")]'
+#confirm_unfollow_xpath = '//button[contains(@class, "_a9--") and contains(@class, "_a9-_")]'
+unfollow_buttons_css = 'button[aria-label="Abonniert"]'
+confirm_unfollow_css = 'button[type="submit"]'
 
 
 for i in range(25):  # Maximal 25 Nutzer

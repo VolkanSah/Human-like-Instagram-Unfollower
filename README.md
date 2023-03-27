@@ -44,8 +44,8 @@ Replace /usr/bin/python3 with the path to your Python installation and /path/to/
 ## Important ⚠️
 Please note that the XPath selectors for the Unfollow and Confirm Unfollow buttons might change over time due to updates in Instagram's web interface. Before submitting any issues or reporting bugs, please verify that the current XPath values in the script are still valid and update them if necessary. You can find the relevant XPath values in the script under the variables unfollow_buttons_xpath and confirm_unfollow_xpath.
 
-## Disclaimer ⚠️
-This script is for educational purposes and personal use only. The user is responsible for complying with Instagram's terms of service and any applicable laws. The author of this script is not responsible for any consequences resulting from the use or misuse of this script.
+## Disclaimer
+⚠️ This script is for educational purposes and personal use only ⚠️ The user is responsible for complying with Instagram's terms of service and any applicable laws. The author of this script is not responsible for any consequences resulting from the use or misuse of this script.
 
 
 Copyright by Volkan Kücükbudak

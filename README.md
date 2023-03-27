@@ -6,7 +6,6 @@ Webdriver Manager
 ### Install the required Python packages with the following command:
     sudo apt-get update
     sudo apt-get install -y libxss1 libappindicator1 libindicator7
-
     pip install -U selenium webdriver_manager
 
     

@@ -9,17 +9,13 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+# Options
 options = Options()
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-
-
 # Replace these values with your Instagram credentials
 username = 'xxxxxxxx'
 password = 'xxxxxxxx'
-
-
-# Login to Instagram
+# Navigate to Instagram.com
 driver.get('https://www.instagram.com/')
 time.sleep(5)
 # skip cookies
@@ -27,28 +23,23 @@ confirm_cookies_xpath = '//button[contains(@class, "_a9--") and contains(@class,
 confirm_cookies = driver.find_element(By.XPATH, confirm_cookies_xpath)
 confirm_cookies.click()
 time.sleep(5)
-
+# Login to Instagram
 username_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, 'username')))
 username_input.send_keys(username)
 password_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, 'password')))
 password_input.send_keys(password)
 password_input.send_keys(Keys.ENTER)
-
 time.sleep(10)  # # Wait after login before navigating to the next page
-
 # Go to your profile
 driver.get(f'https://www.instagram.com/{username}/')
 time.sleep(5)
-
 # Click the Subscribed button
 following_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//a[contains(@href, "/following/")]')))
 following_button.click()
 time.sleep(10) 
-
 # Unfollow-User
 unfollow_buttons_xpath = '//button[contains(@class, "_acan") and contains(@class, "_acap") and contains(@class, "_acat") and contains(@class, "_aj1-")]'
 confirm_unfollow_xpath = '//button[contains(@class, "_a9--") and contains(@class, "_a9-_")]'
-
 for i in range(15):  # Maximal 25 User at one time or you can be blocked!
     try:
         unfollow_button = driver.find_element(By.XPATH, unfollow_buttons_xpath)
@@ -65,6 +56,5 @@ for i in range(15):  # Maximal 25 User at one time or you can be blocked!
 
     except NoSuchElementException:
         break  # No more unfollow buttons were found; end the loop
-
 
 driver.quit()

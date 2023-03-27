@@ -5,7 +5,7 @@
 ### Setup for Debian/Ubuntu. unfollow.py can work on other systems , too.
 
 If you have knowledge about marketing & webtechnologie, then all you need is an unfollower ;)) This script is set up to look like a human, using random time intervals between actions to avoid detection. It's best to run it using a cron job. 
-Important resources for me: https://selenium-python.readthedocs.io/locating-elements.html
+- Important resources for me: https://selenium-python.readthedocs.io/locating-elements.html
 
 ## Prerequisites
 

@@ -18,10 +18,4 @@ Run the script with the following command:
       python unfollow.py
 
 
-error
 
-
-Traceback (most recent call last):
-  File "/home/comin/Schreibtisch/Script/unfollow.py", line 53, in <module>
-    unfollow_button = driver.find_element_by_css_selector(unfollow_buttons_css)
-AttributeError: 'WebDriver' object has no attribute 'find_element_by_css_selector'

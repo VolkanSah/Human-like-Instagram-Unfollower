@@ -1,4 +1,4 @@
-# Best Instagram Unfollower for Debian/Ubuntu
+# Best Instagram Unfollower for Debian/Ubuntu (Human Like)
 
 ⚠️ **Warning**: This script automates the process of unfollowing users on Instagram. Use it at your own risk. The author takes no responsibility for any consequences resulting from the use of this script. The copyright of this script remains with the author.
 
@@ -8,6 +8,7 @@ If you have knowledge about marketing, then all you need is an unfollower! This 
 
 - Python 3
 - pip
+- Google Chrome for Linux64 -> https://support.google.com/chrome/a/answer/9025903?hl=de
 
 ## Installation
 

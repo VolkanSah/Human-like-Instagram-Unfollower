@@ -45,8 +45,9 @@ following_button.click()
 time.sleep(10)  # Warten Sie nach dem Öffnen der Seite mit den Personen, denen Sie folgen
 
 # Unfollow-Nutzer
-unfollow_buttons_css = 'button[class^="_acan _acap _acat _aj1"]'
-confirm_unfollow_css = 'button[class^="_a9-- _a9-_"]'
+# Unfollow-Nutzer
+unfollow_buttons_css = 'button._acan._acap._acat._aj1-'
+confirm_unfollow_css = 'button._a9--._a9-_'
 
 for i in range(25):  # Maximal 25 Nutzer
     try:

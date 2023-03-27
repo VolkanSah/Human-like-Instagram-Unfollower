@@ -1,4 +1,4 @@
-# you can test your configuration of your system with this file
+# you can test your configuration of your system with this test.py
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service

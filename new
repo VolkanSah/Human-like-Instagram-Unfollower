@@ -19,8 +19,8 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 
 
 # Ersetzen Sie diese Werte durch Ihre Instagram-Anmeldedaten
-username = 'anna_krukover'
-password = '@BH@2309'
+username = 'xxxxxxr'
+password = 'xxxxxx'
 
 
 # Anmelden bei Instagram

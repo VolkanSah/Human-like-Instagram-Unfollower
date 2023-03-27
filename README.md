@@ -19,9 +19,10 @@ Run the following commands to install the required packages and libraries:
 sudo apt-get update
 sudo apt-get install -y libxss1 libappindicator1 libindicator7
 pip install -U selenium webdriver_manager
-Usage
-Replace the username and password variables in the script with your Instagram account credentials. Adjust the number of users you want to unfollow in the script by changing the range value. Run the script with the following command:
 ```
+## Usage
+Replace the username and password variables in the script with your Instagram account credentials. Adjust the number of users you want to unfollow in the script by changing the range value. Run the script with the following command:
+
 ```sh
 python unfollow.py
 ```

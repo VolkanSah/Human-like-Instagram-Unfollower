@@ -25,6 +25,11 @@ password = 'xxxxxxxx'
 driver.get('https://www.instagram.com/')
 time.sleep(5)
 
+confirm_cookies_xpath = '//button[contains(@class, "_a9--") and contains(@class, "_a9_1")]'
+confirm_cookies = driver.find_element(By.XPATH, confirm_cookies_xpath)
+confirm_cookies.click()
+time.sleep(5)
+
 username_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, 'username')))
 username_input.send_keys(username)
 password_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, 'password')))

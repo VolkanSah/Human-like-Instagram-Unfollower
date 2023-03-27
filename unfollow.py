@@ -70,3 +70,33 @@ for i in range(25):  # Maximal 25 Nutzer
 
 
 driver.quit()
+
+
+fehlerausgabe:
+ Traceback (most recent call last):
+  File "/home/comin/Schreibtisch/Script/unfollow.py", line 43, in <module>
+    following_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//a[contains(@href, "/following/")]')))
+  File "/usr/local/lib/python3.10/dist-packages/selenium/webdriver/support/wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+#0 0x55959c74b243 <unknown>
+#1 0x55959c50f7a6 <unknown>
+#2 0x55959c54c64d <unknown>
+#3 0x55959c54c761 <unknown>
+#4 0x55959c587da4 <unknown>
+#5 0x55959c56d0ad <unknown>
+#6 0x55959c585932 <unknown>
+#7 0x55959c56ce53 <unknown>
+#8 0x55959c53f9ea <unknown>
+#9 0x55959c540b2e <unknown>
+#10 0x55959c79fd5e <unknown>
+#11 0x55959c7a3a80 <unknown>
+#12 0x55959c7858b0 <unknown>
+#13 0x55959c7a4b63 <unknown>
+#14 0x55959c776f75 <unknown>
+#15 0x55959c7c7998 <unknown>
+#16 0x55959c7c7b27 <unknown>
+#17 0x55959c7e2c23 <unknown>
+#18 0x7fb3d2700b43 <unknown>
+

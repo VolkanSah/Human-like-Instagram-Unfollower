@@ -29,3 +29,5 @@ python unfollow.py
 The script uses random time intervals between 3-12 seconds for each action to mimic human behavior and minimize the risk of getting blocked.
 
 Be careful, as you can be blocked. I have tested this configuration, and after 25 unfollows, you may get a warning. If you perform too many actions too often, you may get banned. It's best to limit the number of unfollows to 15 and use a cron job with 10, 15, or 30-minute intervals to work effectively.
+
+Copyright Volkan Kücükbudak

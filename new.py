@@ -46,8 +46,11 @@ time.sleep(10)  # Warten Sie nach dem Öffnen der Seite mit den Personen, denen 
 
 # Unfollow-Nutzer
 # Unfollow-Nutzer
-unfollow_buttons_css = 'button._acan._acap._acat._aj1-'
-confirm_unfollow_css = 'button._a9--._a9-_'
+unfollow_buttons_xpath = '//button[contains(@class, "_acan") and contains(@class, "_acap") and contains(@class, "_acat") and contains(@class, "_aj1-")]'
+confirm_unfollow_xpath = '//button[contains(@class, "_a9--") and contains(@class, "_a9-_")]'
+
+unfollow_button = driver.find_element_by_xpath(unfollow_buttons_xpath)
+confirm_unfollow_button = driver.find_element_by_xpath(confirm_unfollow_xpath)
 
 for i in range(25):  # Maximal 25 Nutzer
     try:

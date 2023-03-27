@@ -30,7 +30,7 @@ The script uses random time intervals between 3-12 seconds for each action to mi
 
 Be careful, as you can be blocked. I have tested this configuration, and after 25 unfollows, you may get a warning. If you perform too many actions too often, you may get banned. It's best to limit the number of unfollows to 15 and use a cron job with 10, 15, or 30-minute intervals to work effectively.
 
-## Please note
+## Important !
 "Please note that the XPath selectors for the Unfollow and Confirm Unfollow buttons might change over time due to updates in Instagram's web interface. Before submitting any issues or reporting bugs, please verify that the current XPath values in the script are still valid and update them if necessary. You can find the relevant XPath values in the script under the variables unfollow_buttons_xpath and confirm_unfollow_xpath."
 
 

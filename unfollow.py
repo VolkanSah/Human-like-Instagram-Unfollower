@@ -13,7 +13,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
  
 options = Options()
-options.add_argument(f"user-data-dir=/home/<username>/.config/google-chrome")  # replace the path with the path to your Chrome user data directory
+options.add_argument("--profile-directory=Default")
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 

@@ -47,21 +47,20 @@ following_button.click()
 time.sleep(10)  # Warten Sie nach dem Öffnen der Seite mit den Personen, denen Sie folgen
 
 # Unfollow-Nutzer
-#unfollow_buttons_xpath = '//button[contains(@class, "_acan") and contains(@class, "_acap") and contains(@class, "_acat") and contains(@class, "_aj1-")]'
-#confirm_unfollow_xpath = '//button[contains(@class, "_a9--") and contains(@class, "_a9-_")]'
-unfollow_buttons_css = 'button[aria-label="Abonniert"]'
-confirm_unfollow_css = 'button[type="submit"]'
+unfollow_buttons_xpath = '//button[contains(@class, "_acan") and contains(@class, "_acap") and contains(@class, "_acat") and contains(@class, "_aj1-")]'
+confirm_unfollow_xpath = '//button[contains(@class, "_a9--") and contains(@class, "_a9-_")]'
+
 
 
 for i in range(25):  # Maximal 25 Nutzer
     try:
-        unfollow_button = driver.find_element_by_css_selector(unfollow_buttons_css)
+        unfollow_button = driver.find_elements_by_xpath(unfollow_buttons_xpath)
         unfollow_button.click()
         time.sleep(6)  # Warten Sie 2 Sekunden zwischen den Aktionen, um die Wahrscheinlichkeit einer Sperrung zu verringern
 
         # Prüfen, ob der Bestätigungsdialog angezeigt wird, und klicken Sie auf die Bestätigungsschaltfläche
         try:
-            confirm_unfollow_button = driver.find_element_by_css_selector(confirm_unfollow_css)
+            confirm_unfollow_button = driver.find_elements_by_xpath(confirm_unfollow_xpath)
             confirm_unfollow_button.click()
             time.sleep(6)
         except NoSuchElementException:
@@ -72,5 +71,3 @@ for i in range(25):  # Maximal 25 Nutzer
 
 
 driver.quit()
-
-

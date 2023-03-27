@@ -7,7 +7,7 @@ Webdriver Manager
 
     pip install selenium webdriver-manager
     
-##Usage
+## Usage
 Replace the username and password variables in the script with your Instagram account credentials.
 Adjust the number of scroll operations in the script depending on the number of followers you want to load.
 Run the script with the following command:

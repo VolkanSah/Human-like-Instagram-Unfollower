@@ -1,4 +1,4 @@
-# Best Human Like Instagram Unfollower (2023)
+# Best Human Like - Instagram Unfollower (2023)
 **Please share and give me a "Star" for this project**
 
 ⚠️ **Warning**: This script automates the process of unfollowing users on Instagram. Use it at your own risk. The author takes no responsibility for any consequences resulting from the use of this script. The copyright of this script remains with the author. ⚠️

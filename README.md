@@ -1,5 +1,5 @@
 # Best Human Like - Instagram Unfollower (2023)
-Createt to use it for my other script against suspicious followers https://github.com/VolkanSah/Instagram-Suspicious-Followers-Detection
+Created to use it for my other script against suspicious followers https://github.com/VolkanSah/Instagram-Suspicious-Followers-Detection normaly it was a privat git from me. do not use it for harming please!
 **Please share and give me a "Star" for this project**
 
 ⚠️ **Warning**: This script automates the process of unfollowing users on Instagram. Use it at your own risk. The author takes no responsibility for any consequences resulting from the use of this script. The copyright of this script remains with the author. ⚠️

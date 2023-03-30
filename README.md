@@ -55,5 +55,7 @@ Please note that the XPath selectors for the Unfollow and Confirm Unfollow butto
 ## Disclaimer
 ⚠️ This script is for educational purposes and personal use only ⚠️ The user is responsible for complying with Instagram's terms of service and any applicable laws. The author of this script is not responsible for any consequences resulting from the use or misuse of this script.
 
+## Copyright 
+Volkan Kücükbudak
 
-Copyright by Volkan Kücükbudak
+

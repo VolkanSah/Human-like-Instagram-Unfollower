@@ -2,7 +2,7 @@
 
 The Best Human Like - Instagram Unfollower (2023) is a powerful tool designed to detect and remove suspicious followers on your Instagram account. Originally created as a private GitHub repository for use with the [Instagram Suspicious Followers Detection](https://github.com/VolkanSah/Instagram-Suspicious-Followers-Detection) script, this tool is now available for public use.
 
-Please note that this tool is intended for ethical use only and should not be used for harmful purposes. We do not provide an import feature for suspicious_followers.txt to prevent abuse by script kiddies. If you use this tool ethically, you know how to import the data.
+Please note that this tool is intended for ethical use only and should not be used for harmful purposes. I do not provide an import feature for suspicious_followers.txt to prevent abuse by script kiddies. If you use this tool ethically, you know how to import the data.
 
 **I appreciate your support and would be grateful if you could share this project with others and give us a "star" on GitHub or become a sponsor.**
 
@@ -11,7 +11,7 @@ Please note that this tool is intended for ethical use only and should not be us
 ### Setup for Debian/Ubuntu. unfollow.py can work on other systems , too.
 
 This script is set up to look like a human, using random time intervals between actions to avoid detection. It's best to run it using a cron job. 
-- Important resources for me: https://selenium-python.readthedocs.io/locating-elements.html
+- Important resources for me: [RedTheDocs.io](https://selenium-python.readthedocs.io/locating-elements.html)
 
 ## Prerequisites
 

@@ -4,7 +4,7 @@ The Best Human Like - Instagram Unfollower (2023) is a powerful tool designed to
 
 Please note that this tool is intended for ethical use only and should not be used for harmful purposes. I do not provide an import feature for suspicious_followers.txt to prevent abuse by script kiddies. If you use this tool ethically, you know how to import the data.
 
-**I appreciate your support and would be grateful if you could share this project with others and give us a "star" on GitHub or become a sponsor.**
+**I appreciate your support and would be grateful if you could share this project with others and give me a "star" on GitHub or become a sponsor.**
 
 
 ⚠️ **Warning**: This script automates the process of unfollowing users on Instagram. Use it at your own risk. The author takes no responsibility for any consequences resulting from the use of this script. The copyright of this script remains with the author. ⚠️

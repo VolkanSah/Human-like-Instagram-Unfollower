@@ -1,11 +1,15 @@
 # Best Human Like - Instagram Unfollower (2023)
-Created to use it for my other script against suspicious followers https://github.com/VolkanSah/Instagram-Suspicious-Followers-Detection normaly it was a privat git from me. do not use it for harming, please!
-**Please share and give me a "Star" for this project**
+
+The Best Human Like - Instagram Unfollower (2023) is a powerful tool designed to detect and remove suspicious followers on your Instagram account. Originally created as a private GitHub repository for use with the [Instagram Suspicious Followers Detection](https://github.com/VolkanSah/Instagram-Suspicious-Followers-Detection) script, this tool is now available for public use.
+
+Please note that this tool is intended for ethical use only and should not be used for harmful purposes. We do not provide an import feature for suspicious_followers.txt to prevent abuse by script kiddies. If you use this tool ethically, you know how to import the data.
+
+We appreciate your support and would be grateful if you could share this project with others and give us a "Star" on GitHub.
 
 ⚠️ **Warning**: This script automates the process of unfollowing users on Instagram. Use it at your own risk. The author takes no responsibility for any consequences resulting from the use of this script. The copyright of this script remains with the author. ⚠️
 ### Setup for Debian/Ubuntu. unfollow.py can work on other systems , too.
 
-If you have knowledge about marketing & webtechnologie, then all you need is an unfollower ;)) This script is set up to look like a human, using random time intervals between actions to avoid detection. It's best to run it using a cron job. 
+This script is set up to look like a human, using random time intervals between actions to avoid detection. It's best to run it using a cron job. 
 - Important resources for me: https://selenium-python.readthedocs.io/locating-elements.html
 
 ## Prerequisites
@@ -20,6 +24,7 @@ Run the following commands to install the required packages and libraries:
 
 ```sh
 sudo apt-get update
+sudo apt-get uppgrade
 sudo apt-get install -y libxss1 libappindicator1 libindicator7
 pip install -U selenium webdriver_manager
 ```

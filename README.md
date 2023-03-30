@@ -15,9 +15,9 @@ This script is set up to look like a human, using random time intervals between 
 
 ## Prerequisites
 
-- Python 3
-- pip
-- Google Chrome for Linux64 -> https://support.google.com/chrome/a/answer/9025903?hl=de
+- latest Python 3
+- latest pip
+- latest Google Chrome for Linux64 -> https://support.google.com/chrome/a/answer/9025903?hl=de
 
 ## Installation
 

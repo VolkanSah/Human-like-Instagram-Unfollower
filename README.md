@@ -56,8 +56,13 @@ Please note that the XPath selectors for the Unfollow and Confirm Unfollow butto
 
 **I appreciate your support and would be grateful if you could share this project with others and give me a "star" on GitHub or become a sponsor.**
 
+### Thank you for your support!
+- If you appreciate my work, please consider [becoming a 'Sponsor'](https://github.com/sponsors/volkansah), giving a :star: to my projects, or following me. 
+### Copyright
+- [VolkanSah on Github](https://github.com/volkansah)
+- [Developer Site](https://volkansah.github.io)
 
-## Copyright 
-Volkan Kücükbudak
+### License
+This project is licensed under the MIT - see the [LICENSE](LICENSE) file for details
 
 
